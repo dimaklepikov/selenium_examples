@@ -6,7 +6,7 @@ import time
 import math
 import os
 
-path = os.path.abspath(os.path.dirname(__file__))
+path = os.path.abspath(os.path.dirname(__file__§))
 
 
 link = "https://litecart.stqa.ru/en/"
