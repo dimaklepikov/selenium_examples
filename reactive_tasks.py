@@ -9,9 +9,10 @@ try:
 
     # Ваш код, который заполняет обязательные поля
     # browser.find_elements(By.XPATH)
-    browser.find_element(By.XPATH, "//input:required[@placeholder='Input your last name']").send_keys("Dmitriev")
-    browser.find_element(By.XPATH, "//input:required[@placeholder='Input your email']").send_keys("d@dim.ru")
-    browser.find_element(By.XPATH, "//input:required[@placeholder='Input your first name']").send_keys("Dima")
+    # browser.find_element(By.CSS_SELECTOR, ".placeholder[value='Input your first name'").send_keys("Dmitriev")
+    browser.find_element(By.XPATH, "//input[@placeholder='Input your email']").send_keys("d@dim.ru")
+    browser.find_element(By.XPATH, "//input[@placeholder='Input your first name']").send_keys("Dima")
+    browser.find_element(By.XPATH, "//input[@placeholder='Input your last name']").send_keys("DIma")
 
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
@@ -25,6 +26,6 @@ try:
 
 finally:
     # ожидание чтобы визуально оценить результаты прохождения скрипта
-    time.sleep(10)
+    time.sleep(3)
     # закрываем браузер после всех манипуляций
     browser.quit()
